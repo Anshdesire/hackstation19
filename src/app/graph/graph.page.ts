@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-graph',
   templateUrl: 'graph.page.html',
@@ -22,5 +24,10 @@ export class GraphPage {
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
+  constructor(private _router: Router){}
+
+  navigate(type: string) {
+    this._router.navigate(['/'+type]);
+  }
 
 }
