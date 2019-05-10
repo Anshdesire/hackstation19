@@ -10,9 +10,31 @@
     <ion-grid>
       <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          graph 
+          
+          <div style="display: block;">
+              <canvas baseChart
+                      [datasets]="barChartData"
+                      [labels]="barChartLabels"
+                      [options]="barChartOptions"
+                      [plugins]="barChartPlugins"
+                      [legend]="barChartLegend"
+                      [chartType]="barChartType">
+              </canvas>
+            </div> 
         </ion-col>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <rg-gauge-chart
+              [canvasWidth]="canvasWidth"
+              [needleValue]="needleValue"
+              [centralLabel]="centralLabel"
+              [options]="options"
+              [name]="name"
+              [bottomLabel]="bottomLabel"></rg-gauge-chart> 
+        </ion-col>
+  
       </ion-row>
+
+      
 
       <ion-row justify-content-center>
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
@@ -28,15 +50,3 @@
         </ion-row>
     </ion-grid>
 </ion-content>
-
-
-<div style="display: block;">
-  <canvas baseChart
-          [datasets]="barChartData"
-          [labels]="barChartLabels"
-          [options]="barChartOptions"
-          [plugins]="barChartPlugins"
-          [legend]="barChartLegend"
-          [chartType]="barChartType">
-  </canvas>
-</div>

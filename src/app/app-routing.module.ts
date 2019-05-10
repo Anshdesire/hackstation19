@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'graph', loadChildren: './graph/graph.module#graphPageModule' },
   { path: 'cc', loadChildren: './cardcc/cardcc.module#ccPageModule' },
+  { path: 'mf', loadChildren: './mf/mf.module#mfPageModule' },
 ];
 
 @NgModule({

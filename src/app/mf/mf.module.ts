@@ -3,25 +3,29 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-import { GraphPage } from './graph.page';
-import { GaugeChartModule } from 'angular-gauge-chart'
-import { ChartsModule } from "ng2-charts";
+import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
+import { mfPage } from './mf.page';
 
 @NgModule({
   imports: [
-    GaugeChartModule,
     CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild([
       {
         path: '',
-        component: GraphPage
+        component: mfPage
       }
-    ]),
-    ChartsModule
+    ])
   ],
-  declarations: [GraphPage]
+  providers: [TwitterConnect],
+  declarations: [mfPage]
 })
-export class graphPageModule {}
+export class mfPageModule {
+
+
+
+
+}
+
+
