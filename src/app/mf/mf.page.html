@@ -10,10 +10,12 @@
   <form  #form="ngForm">
     <ion-grid>
       <ion-row justify-content-center>
+          <!-- <ion-card class="cardHeight"> -->
+
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           
-            <ion-row justify-content-center>
-            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <!-- <ion-row justify-content-center>
+            <ion-col align-self-center size-md="12" size-lg="12" size-xs="12"> -->
                 
     
                   <div padding>
@@ -45,24 +47,31 @@
                         </ion-select>                      
                       </ion-item>
                   </div>
-              </ion-col>
-            </ion-row>
+              <!-- </ion-col>
+            </ion-row> -->
 
 
 
             
-          <div padding>
+           
+                  
+        </ion-col>
+        
+      </ion-row>
+      <ion-row justify-content-center>
+
+        <div padding>
             <div padding style="text-align: center;">
                 <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                 <!-- designation and occupation , company -->
                 <ion-button  type="submit" size="large" (click)="next()">Result</ion-button>
                 <!-- insights -->
               </div>
-          </div>  
-                  
-        </ion-col>
-        
-      </ion-row>
+          </div> 
+        </ion-row>
+      <!-- </ion-card> -->
+
+
     </ion-grid>
   </form>
 </ion-content>
