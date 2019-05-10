@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { GraphPage } from './graph.page';
+import { ChartsModule } from "ng2-charts";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { GraphPage } from './graph.page';
         path: '',
         component: GraphPage
       }
-    ])
+    ]),
+    ChartsModule
   ],
   declarations: [GraphPage]
 })
