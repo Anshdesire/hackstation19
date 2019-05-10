@@ -11,11 +11,65 @@
     <ion-grid>
       <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div padding>
-            <ion-button  type="submit"  size="small">Facebook</ion-button>
-            <ion-button  type="submit"  size="small">Linkedin</ion-button>
-            <ion-button  type="submit"  size="small">Twitter</ion-button>
-          </div>
+          
+            <ion-row justify-content-center>
+
+
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <div padding style="text-align: center;">
+                  <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
+                  <!-- designation and occupation , company -->
+                  <ion-button  type="submit"  size="small">Twitter</ion-button>
+                  <!-- insights -->
+                </div>
+            </ion-col>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <div padding style="text-align: center;">
+                    <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
+                    <!-- designation and occupation , company -->
+                    <ion-button  type="submit"  size="small">Linked</ion-button>
+                    <!-- insights -->
+                  </div>
+    
+                  <div padding style="text-align: center;">
+                    OR
+                  </div>
+    
+                  <div padding>
+                    <ion-item>
+                        <ion-label>Designation</ion-label>
+                        <ion-select  okText="Okay" cancelText="Dismiss">
+                          <ion-select-option value="developer">Developer</ion-select-option>
+                          <ion-select-option value="lead">Lead</ion-select-option>
+                          <ion-select-option value="GM">GM</ion-select-option>
+                          <ion-select-option value="manager">Manager</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Occupation</ion-label>
+                        <ion-select  okText="Okay" cancelText="Dismiss">
+                          <ion-select-option value="brown">Brown</ion-select-option>
+                          <ion-select-option value="blonde">Blonde</ion-select-option>
+                          <ion-select-option value="black">Black</ion-select-option>
+                          <ion-select-option value="red">Red</ion-select-option>
+                        </ion-select>                    
+                      </ion-item>
+                    <ion-item>
+                        <ion-label>Company</ion-label>
+                        <ion-select okText="Okay" cancelText="Dismiss">
+                          <ion-select-option value="kellton">kellton</ion-select-option>
+                          <ion-select-option value="tcs">TCS</ion-select-option>
+                          <ion-select-option value="tesco">tesco</ion-select-option>
+                          <ion-select-option value="Infosys">Infosys</ion-select-option>
+                        </ion-select>                      
+                      </ion-item>
+                  </div>
+              </ion-col>
+            </ion-row>
+
+
+
+            
           <div padding>
             <ion-item>
               <ion-input  name="id" type="text" placeholder="Mobile" required></ion-input>
@@ -23,8 +77,8 @@
             <ion-item>
               <ion-input  name="id" type="text" placeholder="PAN" required></ion-input>
             </ion-item>
-          </div>
-          
+          </div>  
+                  
         </ion-col>
       </ion-row>
     </ion-grid>
