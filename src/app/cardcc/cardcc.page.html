@@ -1,31 +1,131 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title> <div text-center>
-      <h3>Clear Debts</h3>
-    </div></ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            <div text-center>
+                <h3>Clear Debts</h3>
+            </div>
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-grid>
-        <ion-row *ngFor="let items of dataCc">
-          <ion-col *ngFor="let item of items">
-              <ion-card>
-                  <ion-card-header>
-                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                    <ion-card-title>Card Title</ion-card-title>
-                    <ion-thumbnail slot="start">
-                      <ion-img [src]="item.image"></ion-img>
-                    </ion-thumbnail>
-                  </ion-card-header>
-                
-                  <ion-card-content>
-                    Keep close to Nature's heart... and break clear away, once in awhile,
-                    and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                  </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title class="center-align">Your Current Card</ion-card-title>
+                        <ion-thumbnail slot="start">
+                            <ion-img></ion-img>
+                        </ion-thumbnail>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <table class="table" >
+                            <thead>
+                            <th>
+                                Bank Name
+                            </th>
+                            <th>
+                                IndusInd Bank
+                            </th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </ion-card-content>
                 </ion-card>
-          </ion-col>
+            </ion-col>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title class="center-align" >Our Recommendations</ion-card-title>
+                        <ion-thumbnail slot="start">
+                            <ion-img></ion-img>
+                        </ion-thumbnail>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <table class="table" >
+                            <thead>
+                            <th>
+                                Bank Name
+                            </th>
+                            <th>
+                                IndusInd Bank
+                            </th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Interest
+                                </td>
+                                <td>
+                                    46%
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
         </ion-row>
-      
-      </ion-grid>
+
+    </ion-grid>
 </ion-content>
