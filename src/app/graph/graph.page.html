@@ -7,23 +7,24 @@
 </ion-header>
 
 <ion-content>
-  <form  #form="ngForm">
     <ion-grid>
       <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div padding>
-            <ion-item>
-              <ion-input  name="id" type="text" placeholder="Participat ID" required>
-              </ion-input>
-            </ion-item>
-          </div>
-          <div padding>
-            <ion-button  type="submit"  size="small">Facebook</ion-button>
-            <ion-button  type="submit"  size="small">Linkedin</ion-button>
-            <ion-button  type="submit"  size="small">Twitter</ion-button>
-          </div>
+          graph 
         </ion-col>
       </ion-row>
+
+      <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div padding style="text-align: center;">
+                <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
+                <!-- designation and occupation , company -->
+                <ion-button  type="submit"  size="small" (click)="navigate('cc')">Clear Debts</ion-button>
+                <ion-button  type="submit"  size="small" (click)="navigate('mf')">Invest</ion-button>
+
+                <!-- insights -->
+              </div>
+          </ion-col>
+        </ion-row>
     </ion-grid>
-  </form>
 </ion-content>

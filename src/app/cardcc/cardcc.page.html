@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> <div text-center>
+      <h3>Clear Debts</h3>
+    </div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row *ngFor="let items of dataCc">
+          <ion-col *ngFor="let item of items">
+              <ion-card>
+                  <ion-card-header>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                    <ion-card-title>Card Title</ion-card-title>
+                    <ion-thumbnail slot="start">
+                      <ion-img [src]="item.image"></ion-img>
+                    </ion-thumbnail>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    Keep close to Nature's heart... and break clear away, once in awhile,
+                    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+        </ion-row>
+      
+      </ion-grid>
+</ion-content>

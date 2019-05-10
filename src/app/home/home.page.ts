@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomePage {
 
 
 
-  constructor(public twitter: TwitterConnect) { 
+  constructor(public twitter: TwitterConnect, private _router: Router) { 
     console.log(this.twitter);
   }
 
@@ -28,6 +29,10 @@ export class HomePage {
     }, (onError) => {
       console.log(onError);
     });
+  }
+
+  next() {
+    this._router.navigate(['/graph']);
   }
 
 
