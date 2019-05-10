@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title> <div text-center>
-      <h3>Financial coach</h3>
+      <h3>Financial coach - Mutual Funds</h3>
     </div></ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,54 +13,35 @@
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           
             <ion-row justify-content-center>
-
-
             <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-                <div padding style="text-align: center;">
-                  <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
-                  <!-- designation and occupation , company -->
-                  <ion-button  type="submit"  size="small" (click)="login()">Twitter</ion-button>
-                  <!-- insights -->
-                </div>
-            </ion-col>
-            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-                <div padding style="text-align: center;">
-                    <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
-                    <!-- designation and occupation , company -->
-                    <ion-button  type="submit"  size="small">LinkedIn</ion-button>
-                    <!-- insights -->
-                  </div>
-    
-                  <div padding style="text-align: center;">
-                    OR
-                  </div>
+                
     
                   <div padding>
                     <ion-item>
-                        <ion-label>Designation</ion-label>
+                        <ion-label>Goal</ion-label>
                         <ion-select  okText="Okay" cancelText="Dismiss">
-                          <ion-select-option value="developer">Developer</ion-select-option>
-                          <ion-select-option value="lead">Lead</ion-select-option>
-                          <ion-select-option value="GM">GM</ion-select-option>
-                          <ion-select-option value="manager">Manager</ion-select-option>
+                          <ion-select-option value="Home">Home</ion-select-option>
+                          <ion-select-option value="Retirement">Retirement</ion-select-option>
                         </ion-select>
                     </ion-item>
                     <ion-item>
-                        <ion-label>Occupation</ion-label>
-                        <ion-select  okText="Okay" cancelText="Dismiss">
-                          <ion-select-option value="brown">Brown</ion-select-option>
-                          <ion-select-option value="blonde">Blonde</ion-select-option>
-                          <ion-select-option value="black">Black</ion-select-option>
-                          <ion-select-option value="red">Red</ion-select-option>
-                        </ion-select>                    
-                      </ion-item>
+                      <ion-label position="floating">Target Year</ion-label>
+                      <ion-input name="year" type="text" required></ion-input>
+                    </ion-item>
                     <ion-item>
-                        <ion-label>Company</ion-label>
+                      <ion-label position="floating">Amount</ion-label>
+                      <ion-input name="amount" type="text" required></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label position="floating">Annual Salary</ion-label>
+                      <ion-input name="salary" type="text" required></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Risk Factor</ion-label>
                         <ion-select okText="Okay" cancelText="Dismiss">
-                          <ion-select-option value="kellton">kellton</ion-select-option>
-                          <ion-select-option value="tcs">TCS</ion-select-option>
-                          <ion-select-option value="tesco">tesco</ion-select-option>
-                          <ion-select-option value="Infosys">Infosys</ion-select-option>
+                          <ion-select-option value="Aggressive">Aggressive</ion-select-option>
+                          <ion-select-option value="Average">Moderate</ion-select-option>
+                          <ion-select-option value="Neutral">Conservative</ion-select-option>
                         </ion-select>                      
                       </ion-item>
                   </div>
@@ -71,17 +52,10 @@
 
             
           <div padding>
-            <ion-item>
-              <ion-input  name="id" type="text" placeholder="Mobile" required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input  name="id" type="text" placeholder="PAN" required></ion-input>
-            </ion-item>
-
             <div padding style="text-align: center;">
                 <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                 <!-- designation and occupation , company -->
-                <ion-button  type="submit"  size="small" (click)="next()">Next</ion-button>
+                <ion-button  type="submit" size="large" (click)="next()">Result</ion-button>
                 <!-- insights -->
               </div>
           </div>  
