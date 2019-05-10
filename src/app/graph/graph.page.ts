@@ -15,6 +15,21 @@ export class GraphPage {
   public barChartOptions: ChartOptions = {
     responsive: true,
   };
+
+  public canvasWidth = 300
+  public needleValue = 741
+  public centralLabel = ''
+  public name = 'Credit Score'
+  public bottomLabel = '741'
+  public options = {
+      hasNeedle: true,
+      needleColor: 'gray',
+      needleUpdateSpeed: 1000,
+      arcColors: ['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(44, 151, 222)'],
+      arcDelimiters: [30, 30],
+      rangeLabel: ['0', '1000'],
+      needleStartValue: 50,
+  }
   public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
