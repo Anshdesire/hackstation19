@@ -12,41 +12,25 @@
       <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           
-            <ion-row justify-content-center>
+            <!-- <ion-row justify-content-center> -->
             <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
                 
     
-                  <div padding>
+                <ion-card>
                     <ion-item>
-                        <ion-label>Goal</ion-label>
-                        <ion-select  okText="Okay" cancelText="Dismiss">
-                          <ion-select-option value="Home">Home</ion-select-option>
-                          <ion-select-option value="Retirement">Retirement</ion-select-option>
-                        </ion-select>
+                      <ion-icon name="pin" slot="start"></ion-icon>
+                      <ion-label>Goal: Retirement</ion-label>
+                      <ion-label slot="end">Goal Health: Good</ion-label>
                     </ion-item>
-                    <ion-item>
-                      <ion-label position="floating">Target Year</ion-label>
-                      <ion-input name="year" type="text" required></ion-input>
-                    </ion-item>
-                    <ion-item>
-                      <ion-label position="floating">Amount</ion-label>
-                      <ion-input name="amount" type="text" required></ion-input>
-                    </ion-item>
-                    <ion-item>
-                      <ion-label position="floating">Annual Salary</ion-label>
-                      <ion-input name="salary" type="text" required></ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label>Risk Factor</ion-label>
-                        <ion-select okText="Okay" cancelText="Dismiss">
-                          <ion-select-option value="Aggressive">Aggressive</ion-select-option>
-                          <ion-select-option value="Average">Moderate</ion-select-option>
-                          <ion-select-option value="Neutral">Conservative</ion-select-option>
-                        </ion-select>                      
-                      </ion-item>
-                  </div>
+                  
+                    <ion-card-content>
+                      This is content, without any paragraph or header tags,
+                      within an ion-card-content element.
+                    <ion-progress-bar value="0.2"></ion-progress-bar>
+                    </ion-card-content>
+                  </ion-card>
               </ion-col>
-            </ion-row>
+            <!-- </ion-row> -->
 
 
 

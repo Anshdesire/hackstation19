@@ -32,7 +32,7 @@ export class mfPage {
   }
 
   next() {
-    this._router.navigate(['/graph']);
+    this._router.navigate(['/mfsuggestion']);
   }
 
 
