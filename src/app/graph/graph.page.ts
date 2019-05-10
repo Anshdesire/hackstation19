@@ -16,28 +16,34 @@ export class GraphPage {
     responsive: true,
   };
 
-  public canvasWidth = 300
-  public needleValue = 741
+
+  public creditScore = Math.floor(Math.random() * (900 - 600) + 600);
+  public debtsPercentage = Math.floor(Math.random() * (55 - 45 + 1)) + 45;  
+
+
+  public canvasWidth = 379
+  public needleValue = (this.creditScore / 900 ) * 100;
   public centralLabel = ''
   public name = 'Credit Score'
-  public bottomLabel = '741'
+  public bottomLabel = `${this.creditScore}`;
   public options = {
       hasNeedle: true,
       needleColor: 'gray',
-      needleUpdateSpeed: 1000,
-      arcColors: ['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(44, 151, 222)'],
-      arcDelimiters: [30, 30],
-      rangeLabel: ['0', '1000'],
+      needleUpdateSpeed: 900,
+      arcColors: ['rgb(255,0,0)', 'green', 'rgb(44, 151, 222)'],
+      arcDelimiters: [89],
+      rangeLabel: ['0', '900'],
       needleStartValue: 50,
   }
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+
+  public barChartLabels: Label[] = ['Travel', 'Dinning', 'Shopping', 'Funds', 'Fuel'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [];
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: '' },
+    // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
   constructor(private _router: Router){}
 
