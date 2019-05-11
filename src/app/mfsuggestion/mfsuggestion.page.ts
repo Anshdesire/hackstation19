@@ -32,7 +32,7 @@ export class mfsuggestionPage {
           }
         }
         var date = new Date();
-        date = '2020' - date.getFullYear();
+        date = 2020 - date.getFullYear();
         date = (date * 12) - 5;
         this.tenure = parseInt(this.params.amount / date)
     });
