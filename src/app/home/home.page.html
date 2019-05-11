@@ -23,7 +23,7 @@
                     <div padding style="text-align: center;">
                       <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                       <!-- designation and occupation , company -->
-                      <ion-button  size="small" (click)="login()">Twitter</ion-button>
+                      <ion-button  size="small" (click)="login()">Login with Twitter</ion-button>
                       <!-- insights -->
                     </div>
                 </ion-col>
@@ -34,7 +34,7 @@
                     <div padding style="text-align: center;">
                         <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                         <!-- designation and occupation , company -->
-                        <ion-button   size="small">LinkedIn</ion-button>
+                        <ion-button   size="small" (click)="login()">Connect with LinkedIn</ion-button>
                         <!-- insights -->
                       </div>
         
@@ -55,10 +55,9 @@
                         <ion-item>
                             <ion-label>Occupation</ion-label>
                             <ion-select name="occupation" ngModel required okText="Okay" cancelText="Dismiss">
-                              <ion-select-option value="brown">Brown</ion-select-option>
-                              <ion-select-option value="blonde">Blonde</ion-select-option>
-                              <ion-select-option value="black">Black</ion-select-option>
-                              <ion-select-option value="red">Red</ion-select-option>
+                              <ion-select-option value="priovate">Private Sector</ion-select-option>
+                              <ion-select-option value="gov">Gov Employee</ion-select-option>
+                              <ion-select-option value="business">Business</ion-select-option>
                             </ion-select>                    
                           </ion-item>
                         <ion-item>
