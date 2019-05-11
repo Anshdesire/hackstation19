@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <form  #form="ngForm">
+  <form  #form="ngForm" (ngSubmit)="fillDetails(form)">
     <ion-grid>
       <ion-row justify-content-center>
           <!-- <ion-card class="cardHeight"> -->
@@ -21,26 +21,26 @@
                   <div padding>
                     <ion-item>
                         <ion-label>Goal</ion-label>
-                        <ion-select  okText="Okay" cancelText="Dismiss">
+                        <ion-select name="goal" ngModel required  okText="Okay" cancelText="Dismiss">
                           <ion-select-option value="Home">Home</ion-select-option>
                           <ion-select-option value="Retirement">Retirement</ion-select-option>
                         </ion-select>
                     </ion-item>
                     <ion-item>
                       <ion-label position="floating">Target Year</ion-label>
-                      <ion-input name="year" type="text" required></ion-input>
+                      <ion-input name="year" type="text" ngModel required></ion-input>
                     </ion-item>
                     <ion-item>
                       <ion-label position="floating">Amount</ion-label>
-                      <ion-input name="amount" type="text" required></ion-input>
+                      <ion-input name="amount" type="text" ngModel required></ion-input>
                     </ion-item>
                     <ion-item>
                       <ion-label position="floating">Annual Salary</ion-label>
-                      <ion-input name="salary" type="text" required></ion-input>
+                      <ion-input name="salary" type="text" ngModel required></ion-input>
                     </ion-item>
                     <ion-item>
                         <ion-label>Risk Factor</ion-label>
-                        <ion-select okText="Okay" cancelText="Dismiss">
+                        <ion-select name="riskFactor" ngModel required okText="Okay" cancelText="Dismiss">
                           <ion-select-option value="Aggressive">Aggressive</ion-select-option>
                           <ion-select-option value="Average">Moderate</ion-select-option>
                           <ion-select-option value="Neutral">Conservative</ion-select-option>
@@ -64,7 +64,7 @@
             <div padding style="text-align: center;">
                 <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                 <!-- designation and occupation , company -->
-                <ion-button  type="submit" size="large" (click)="next()">Result</ion-button>
+                <ion-button  type="submit" [disabled]="form.invalid" size="large">Result</ion-button>
                 <!-- insights -->
               </div>
           </div> 

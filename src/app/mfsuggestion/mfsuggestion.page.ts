@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mfsuggestion',
@@ -9,11 +9,18 @@ import { Router } from '@angular/router';
 })
 export class mfsuggestionPage {
 
+    params: any =  {};
 
 
 
-  constructor(public twitter: TwitterConnect, private _router: Router) { 
-    console.log(this.twitter);
+  constructor(
+    public twitter: TwitterConnect,
+    private _router: Router,
+    private route: ActivatedRoute
+  ) { 
+    this.route.queryParams.subscribe(params => {
+        this.params = JSON.parse(params.data);
+    });
   }
 
   login() {

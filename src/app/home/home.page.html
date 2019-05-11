@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <form  #form="ngForm">
+  <form  #form="ngForm" (ngSubmit)="register(form)">
     <ion-grid>
       <ion-card class="cardHeight">
 
@@ -23,7 +23,7 @@
                     <div padding style="text-align: center;">
                       <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                       <!-- designation and occupation , company -->
-                      <ion-button  type="submit"  size="small" (click)="login()">Twitter</ion-button>
+                      <ion-button  size="small" (click)="login()">Twitter</ion-button>
                       <!-- insights -->
                     </div>
                 </ion-col>
@@ -34,7 +34,7 @@
                     <div padding style="text-align: center;">
                         <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                         <!-- designation and occupation , company -->
-                        <ion-button  type="submit"  size="small">LinkedIn</ion-button>
+                        <ion-button   size="small">LinkedIn</ion-button>
                         <!-- insights -->
                       </div>
         
@@ -45,7 +45,7 @@
                       <div padding>
                         <ion-item>
                             <ion-label>Designation</ion-label>
-                            <ion-select  okText="Okay" cancelText="Dismiss">
+                            <ion-select name="designation" ngModel required  okText="Okay" cancelText="Dismiss">
                               <ion-select-option value="developer">Developer</ion-select-option>
                               <ion-select-option value="lead">Lead</ion-select-option>
                               <ion-select-option value="GM">GM</ion-select-option>
@@ -54,7 +54,7 @@
                         </ion-item>
                         <ion-item>
                             <ion-label>Occupation</ion-label>
-                            <ion-select  okText="Okay" cancelText="Dismiss">
+                            <ion-select name="occupation" ngModel required okText="Okay" cancelText="Dismiss">
                               <ion-select-option value="brown">Brown</ion-select-option>
                               <ion-select-option value="blonde">Blonde</ion-select-option>
                               <ion-select-option value="black">Black</ion-select-option>
@@ -63,7 +63,7 @@
                           </ion-item>
                         <ion-item>
                             <ion-label>Company</ion-label>
-                            <ion-select okText="Okay" cancelText="Dismiss">
+                            <ion-select name="company" ngModel required okText="Okay" cancelText="Dismiss">
                               <ion-select-option value="kellton">kellton</ion-select-option>
                               <ion-select-option value="tcs">TCS</ion-select-option>
                               <ion-select-option value="tesco">tesco</ion-select-option>
@@ -82,16 +82,16 @@
 
                 <div padding>
                   <ion-item>
-                    <ion-input  name="id" type="text" placeholder="Mobile" required></ion-input>
+                    <ion-input  name="mobile" ngModel type="text" placeholder="Mobile" required></ion-input>
                   </ion-item>
                   <ion-item>
-                    <ion-input  name="id" type="text" placeholder="PAN" required></ion-input>
+                    <ion-input  name="pan" ngModel type="text" placeholder="PAN" required></ion-input>
                   </ion-item>
 
                   <div padding style="text-align: center;">
                       <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
                       <!-- designation and occupation , company -->
-                      <ion-button  type="submit"  size="small" (click)="next()">Next</ion-button>
+                      <ion-button  type="submit"  [disabled]="form.invalid" size="small">Next</ion-button>
                       <!-- insights -->
                     </div>
                 </div>  

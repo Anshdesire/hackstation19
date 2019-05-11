@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TwitterConnect } from '@ionic-native/twitter-connect/ngx';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-mf',
@@ -12,8 +13,39 @@ export class mfPage {
 
 
 
-  constructor(public twitter: TwitterConnect, private _router: Router) { 
+  constructor(public twitter: TwitterConnect, private _router: Router,
+    public loadingController: LoadingController) { 
     console.log(this.twitter);
+  }
+
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Fetching details',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+
+    console.log('Loading dismissed!');
+  }
+
+  async presentLoadingWithOptions() {
+    const loading = await this.loadingController.create({
+      spinner: null,
+      duration: 5000,
+      message: 'Please wait...',
+      translucent: true,
+      cssClass: 'custom-class custom-loading'
+    });
+    return await loading.present();
+  }
+
+
+  async fillDetails(form:any) {
+    await this.presentLoading();
+    this.next(form.value);
   }
 
   login() {
@@ -31,8 +63,12 @@ export class mfPage {
     });
   }
 
-  next() {
-    this._router.navigate(['/mfsuggestion']);
+  next(data) {
+    this._router.navigate(['/mfsuggestion'], {
+      queryParams: {
+        data: JSON.stringify(data)
+      }
+    });
   }
 
 
