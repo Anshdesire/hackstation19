@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class mfsuggestionPage {
 
     params: any =  {};
-    tenure: any = 0;
+    tenure: number;
 
 
 
@@ -35,7 +35,7 @@ export class mfsuggestionPage {
         date = new Date();
         date = 2020 - date.getFullYear();
         date = (date * 12) - 5;
-        this.tenure = parseInt(this.params.amount / date)
+        this.tenure = Math.ceil(this.params.amount / date)
     });
   }
 
