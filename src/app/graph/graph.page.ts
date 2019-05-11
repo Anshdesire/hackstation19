@@ -42,7 +42,7 @@ export class GraphPage {
   public barChartPlugins = [];
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: '' },
+    { data: [17, 23 , 20, 45, 15, 0, 100], label: '' },
     // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
   constructor(private _router: Router){}
