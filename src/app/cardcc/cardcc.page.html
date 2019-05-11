@@ -1,0 +1,159 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div text-center>
+                <h3>Clear Debts</h3>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-card class="cardHeight" *ngFor="let cardItem of datacc">
+
+            <ion-col align-self-center size-md="6" size-lg="8" size-xs="12" style="text-align:center">
+
+                <ion-row>
+                    <ion-col>
+                        <ion-card>
+                            <ion-card-header style="background-color: #ed9b1f;">
+                                    <ion-card-title style="color:white" class="center-align">Your Current Card</ion-card-title>
+                                <ion-thumbnail slot="start">
+                                    <ion-img></ion-img>
+                                </ion-thumbnail>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                <table class="table" >
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            Bank Name
+                                        </td>
+                                        <td>
+                                                <!-- bank: "SBI",
+                                                interest: 14,
+                                                balance: 40000,
+                                                interestPaid: 1000 -->
+                                            {{cardItem.current.bank}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Interest
+                                        </td>
+                                        <td>
+                                                <ion-badge color="primary">{{cardItem.current.interest}} %</ion-badge>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Outsdanding Balance
+                                        </td>
+                                        <td>
+                                                <ion-badge color="primary">{{cardItem.current.balance}}</ion-badge>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Interest Paid
+                                        </td>
+                                        <td>
+                                                <ion-badge color="primary">{{cardItem.current.interestPaid}}</ion-badge>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-row>
+                        <ion-col *ngFor="let item of cardItem.recommended">
+                            <ion-card>
+                                <ion-card-header style="background-color: #00a65a;">
+                                    <ion-card-title style="color:white" class="center-align">Our Recommendations</ion-card-title>
+                                    <ion-thumbnail slot="start">
+                                        <ion-img></ion-img>
+                                    </ion-thumbnail>
+                                </ion-card-header>
+            
+                                <ion-card-content>
+                                        <table class="table" >
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                        Loan Type
+                                                </td>
+                                                <!-- type: 'Personal Loan',
+        interest: 11,
+        balance: 103000,
+        interestTobePaid: 120000  -->
+                                                <td>
+                                                        {{item.type}}
+                                                </td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td>
+                                                    Interest
+                                                </td>
+                                                <td>
+                                                        <ion-badge color="primary">{{item.interest}} %</ion-badge>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Outstanding Balance 
+                                                </td>
+                                                <td>
+                                                        <ion-badge color="primary">{{item.balance}} %</ion-badge>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Interest to be Paid
+                                                </td>
+                                                <td>
+                                                        <ion-badge color="primary">{{item.interestTobePaid}} %</ion-badge>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                </ion-card-content>
+
+                                <ion-row justify-content-center>
+                                    <ion-col align-self-center size-md="6" size-lg="12" size-xs="12" style="text-align:center">
+                                        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                                            <div style="font-size: 16px">                                    You will save {{item.saving}} Per Month 
+                                                </div>
+                                        </ion-col>
+                                        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                                            <div padding style="text-align: center;">
+                                                <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
+                                                <!-- designation and occupation , company -->
+                                                <ion-button  type="submit"  size="small" >Apply Now</ion-button>
+                                                <!-- insights -->
+                                            </div>
+                                        </ion-col>
+                                        
+
+                                    </ion-col>
+                                </ion-row>
+
+
+                            </ion-card>
+                        </ion-col>
+                        
+                </ion-row>
+
+            </ion-col>
+
+        </ion-card>
+
+    </ion-grid>
+</ion-content>

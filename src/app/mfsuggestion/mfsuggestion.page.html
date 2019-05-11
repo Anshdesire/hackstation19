@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> <div text-center>
+      <h3>Financial coach - Mutual Funds</h3>
+    </div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  #form="ngForm">
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          
+            <!-- <ion-row justify-content-center> -->
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                
+    
+                <ion-card>
+                    <ion-item>
+                      <ion-icon name="pin" slot="start"></ion-icon>
+                      <ion-label>Goal: {{this.params.goal}}</ion-label>
+                      <ion-label slot="end">Goal Health: Good</ion-label>
+                    </ion-item>
+                  
+                    <ion-card-content>
+                      This is content, without any paragraph or header tags,
+                      within an ion-card-content element.
+                    <ion-progress-bar value="0.2"></ion-progress-bar>
+                    </ion-card-content>
+                  </ion-card>
+              </ion-col>
+            <!-- </ion-row> -->
+
+
+
+            
+          <div padding>
+            <div padding style="text-align: center;">
+                <!-- <ion-button  type="submit"  size="small">Linkedin</ion-button>  -->
+                <!-- designation and occupation , company -->
+                <!-- <ion-button  type="submit" size="large" (click)="next()">Result</ion-button> -->
+                <!-- insights -->
+              </div>
+          </div>  
+                  
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
