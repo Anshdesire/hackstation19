@@ -10,6 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class mfsuggestionPage {
 
     params: any =  {};
+    tenure: any = 0;
 
 
 
@@ -17,9 +18,23 @@ export class mfsuggestionPage {
     public twitter: TwitterConnect,
     private _router: Router,
     private route: ActivatedRoute
-  ) { 
+  ) {
     this.route.queryParams.subscribe(params => {
         this.params = JSON.parse(params.data);
+        console.log(this.params);
+        if (this.params.riskFactor === 'Aggressive') {
+          this.params.riskFactor = 'Equity';
+        } else {
+          if (this.params.riskFactor === 'Moderate') {
+            this.params.riskFactor = 'Hybrid';
+          } else {
+            this.params.riskFactor = 'Debt';
+          }
+        }
+        var date = new Date();
+        date = '2020' - date.getFullYear();
+        date = (date * 12) - 5;
+        this.tenure = parseInt(this.params.amount / date)
     });
   }
 

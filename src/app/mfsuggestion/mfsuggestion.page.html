@@ -18,15 +18,15 @@
     
                 <ion-card>
                     <ion-item>
-                      <ion-icon name="pin" slot="start"></ion-icon>
-                      <ion-label>Goal: {{this.params.goal}}</ion-label>
-                      <ion-label slot="end">Goal Health: Good</ion-label>
+                      <ion-label style="margin-left: 20px;">Goal: {{this.params.goal}}</ion-label>
+                      <ion-label>Fund Type: {{this.params.riskFactor}}</ion-label>
                     </ion-item>
                   
                     <ion-card-content>
-                      This is content, without any paragraph or header tags,
-                      within an ion-card-content element.
-                    <ion-progress-bar value="0.2"></ion-progress-bar>
+                      <ion-item>SIP Amount: ₹ {{this.params.amount}}</ion-item>
+                      <ion-item>Target Year: {{this.params.year}}</ion-item>
+                      <ion-item>Target Amount: ₹ {{this.tenure}}</ion-item>
+                    <!-- <ion-progress-bar value="0.2"></ion-progress-bar> -->
                     </ion-card-content>
                   </ion-card>
               </ion-col>
